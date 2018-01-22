@@ -1,0 +1,33 @@
+{
+  "name": "qrflow",
+  "scripts": {
+  },
+  "env": {
+    "APP_SETTINGS": {
+      "required": true
+    },
+    "DISABLE_COLLECTSTATIC": {
+      "required": true
+    },
+    "REDISTOGO_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+    "heroku": {
+      "quantity": 1
+    },
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "redistogo"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
